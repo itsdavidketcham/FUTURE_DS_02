@@ -51,7 +51,7 @@ for reason in reason_counts.index:
     print(f"- {reason}: {reason_counts[reason]} accounts ({reason_pct[reason]:.1f}%)")
 
 
-# Support Ticket Analysis ---
+# Support Ticket Analysis 
 print("SUPPORT METRICS FOR CHURNED VS ACTIVE ACCOUNTS ")
 # Merge the datasets together using account_id
 ticket_churn_analysis = pd.merge(tickets, accounts[['account_id', 'churn_flag']], on='account_id', how='left')
@@ -65,7 +65,7 @@ escalation_rates = ticket_churn_analysis.groupby('churn_flag')['escalation_flag'
 print(escalation_rates)
 
 
-#  Plotting the Chart ---
+# plotting the Chart
 print("Plotting the industry churn chart")
 plt.figure(figsize=(8, 5))
 
